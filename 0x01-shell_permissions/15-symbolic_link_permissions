@@ -1,2 +1,2 @@
 #!/bin/bash
-chown betty:holberton -f _hello
+chown betty:holberton --no-dereference _hello
