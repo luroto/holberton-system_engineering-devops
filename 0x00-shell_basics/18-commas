@@ -1,3 +1,4 @@
-#!/bin/bash
-ls -pma :
+B#!/bin/bash
+ls -map  
+echo 
 
