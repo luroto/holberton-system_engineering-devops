@@ -7,19 +7,25 @@ ta="17"
 while [ $i -lt 20 ]
 do 
   let "i++"
-  echo "$i"
   case $i in
 
     $c)
+     echo $i
      echo "bad luck from China"
+     continue
     ;;
    
     $j)
+     echo $i
      echo "bad luck from Japan"
+     continue
     ;;
 
     $ta)
+      echo $i
       echo "bad luch from Italy"
+      continue
     ;;
   esac
+  echo $i
 done
