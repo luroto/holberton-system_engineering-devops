@@ -1,1 +1,8 @@
 #!/usr/bin/env bash
+# This script prints Holberton School 10 times
+# shellcheck disable=SC2034 
+# Unused variables left for readability
+for _i in {1..10}
+do
+   echo "Holberton School"
+done
