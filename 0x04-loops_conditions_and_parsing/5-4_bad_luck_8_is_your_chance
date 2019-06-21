@@ -10,12 +10,10 @@ do
    if [ "$i" -eq "$b" ]
      then
       echo "bad luck"
-      continue
-   fi
-   if [ "$i" -eq "$g" ]
+   elif [ "$i" -eq "$g" ]
     then 
      echo "good luck"
-     continue
-   fi
-   echo "Holberton School" 
+   else
+     echo "Holberton School"
+   fi 
 done
