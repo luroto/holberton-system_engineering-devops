@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script prints the time
 h="0"
-while [ $h -le "23" ]
+while [ $h -le "11" ]
 do
    echo "Hour: $h"
    m="1"     
