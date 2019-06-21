@@ -7,7 +7,7 @@ do
    m="1"     
       while [ $m -le "59" ]
         do
-          echo $m
+          echo "$m"
           let "m +=1"
         done
    ((h++))
