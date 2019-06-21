@@ -12,7 +12,7 @@ do
      echo "bad luck from Japan";;
 
     "17")
-      echo "bad luch from Italy";;
+      echo "bad luck from Italy";;
   esac
   ((i +=1))
 done
