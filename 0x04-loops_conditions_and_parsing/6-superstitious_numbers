@@ -1,1 +1,25 @@
 #!/usr/bin/env bash
+# This script prints numbers from 1 to 20 with some conditions
+i="1"
+c="4"
+j="9"
+ta="17"
+while [ $i -le 20 ]
+do 
+  echo "$i"
+  case $i in
+
+    $c)
+     echo "bad luck from China"
+    ;;
+   
+    $j)
+     echo "bad luck from Japan"
+    ;;
+
+    $ta)
+      echo "bad luch from Italy"
+    ;;
+  esac
+  let "i +=1"
+done
