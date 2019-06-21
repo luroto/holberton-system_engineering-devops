@@ -6,16 +6,13 @@ do
   echo $i
   case $i in
     "4")
-     echo "bad luck from China"
-    ;;
+     echo "bad luck from China";;
    
     "9")
-     echo "bad luck from Japan"
-    ;;
+     echo "bad luck from Japan";;
 
     "17")
-      echo "bad luch from Italy"
-    ;;
+      echo "bad luch from Italy";;
   esac
-  let "i +=1"
+  ((i +=1))
 done
