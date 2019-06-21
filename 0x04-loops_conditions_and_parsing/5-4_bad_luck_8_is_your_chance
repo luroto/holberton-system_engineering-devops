@@ -1,1 +1,21 @@
 #!/usr/bin/env bash
+# This script prints Holberton School ten times through a while loop
+# A condition is used for additional printing in iteration 4 and 8
+i="0"
+b="4"
+g="8"
+while [ $i -lt 10 ]
+do
+   let "i +=1"  
+   if [ "$i" -eq "$b" ]
+     then
+      echo "bad luck"
+      continue
+   fi
+   if [ "$i" -eq "$g" ]
+    then 
+     echo "good luck"
+     continue
+   fi
+   echo "Holberton School" 
+done
