@@ -1,1 +1,14 @@
 #!/usr/bin/env bash
+# This script prints Holberton School ten times through a while loop
+# A condition is used for an additional print
+i="0"
+l="9"
+while [ $i -lt 10 ]
+do
+   echo "Holberton School"
+   let "i +=1"  
+   if [ "$i" -eq "$l" ]
+     then
+      echo "Hi"
+   fi
+done
