@@ -1,1 +1,20 @@
 #!/usr/bin/env bash
+#This script prints the fizzbuz exercise
+i="0"
+while [ $i -lt "100" ]
+do
+  ((i++))
+  if [ $((i % 3)) -eq "0" ] && [ $((i % 5)) -eq "0" ]; then
+     echo "FizzBuzz"
+     continue
+  elif [ $((i % 3)) -eq "0" ]; then
+       echo "Fizz"
+       continue
+  elif [ $((i % 5)) -eq "0" ]; then 
+       echo "Buzz"
+       continue
+  else
+    echo $i
+  fi
+done
+ 
