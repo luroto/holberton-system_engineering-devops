@@ -1,0 +1,20 @@
+total 68
+-rw------- 1 vagrant vagrant 1766 Jun 21 19:18 0-RSA_public_key
+-rwxrw-r-- 1 vagrant vagrant  414 Jun 21 19:18 0-RSA_public_key.pub
+-rwxrw-r-- 1 vagrant vagrant   20 Jun 21 19:02 100-read_and_cut
+-rwxrw-r-- 1 vagrant vagrant   20 Jun 21 19:02 101-tell_the_story_of_passwd
+-rwxrw-r-- 1 vagrant vagrant   20 Jun 21 19:02 102-lets_parse_apache_logs
+-rwxrw-r-- 1 vagrant vagrant   20 Jun 21 19:02 103-dig_the-data
+-rwxrw-r-- 1 vagrant vagrant  372 Jun 22 03:41 10-fizzbuzz
+-rwxrw-r-- 1 vagrant vagrant  189 Jun 21 21:20 1-for_holberton_school
+-rwxrw-r-- 1 vagrant vagrant  163 Jun 21 21:28 2-while_holberton_school
+-rwxrw-r-- 1 vagrant vagrant  166 Jun 21 21:33 3-until_holberton_school
+-rwxrw-r-- 1 vagrant vagrant  275 Jun 21 21:53 4-if_9_say_hi
+-rwxrw-r-- 1 vagrant vagrant  377 Jun 21 22:05 5-4_bad_luck_8_is_your_chance
+-rwxrw-r-- 1 vagrant vagrant  296 Jun 21 23:19 6-superstitious_numbers
+-rwxrw-r-- 1 vagrant vagrant  224 Jun 22 02:00 7-clock
+-rwxrw-r-- 1 vagrant vagrant  144 Jun 22 03:50 8-for_ls
+-rwxrw-r-- 1 vagrant vagrant   34 Jun 22 01:31 9-to_file_or_not_to_file
+-rw-rw-r-- 1 vagrant vagrant    0 Jun 22 03:49 cut
+-rw-rw-r-- 1 vagrant vagrant    0 Jun 22 03:50 list
+-rw-rw-r-- 1 vagrant vagrant 2139 Jun 21 19:02 README.md

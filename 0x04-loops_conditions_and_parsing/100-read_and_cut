@@ -1,1 +1,7 @@
 #!/usr/bin/env bash
+# Read and cut exercise
+lecto=$(cat /etc/passwd)
+for i in $lecto;
+do
+  echo i > cut -f1 -f3 -f6 -d:
+done
