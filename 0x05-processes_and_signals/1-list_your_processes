@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script prints all the processes, even those which might not have a TTY
 # including processes' hierarchy
-ps aux
+ps faux
