@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-#This script displays the ps command output but only with one name
+# This script displays the ps command output but only with one name
 # shellcheck disable=SC2009
 ps -p "$(pidof bash)"
