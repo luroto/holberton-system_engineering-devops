@@ -1,1 +1,3 @@
 #!/usr/bin/env bash
+#This script displays the ps command output but only with one name
+ps -p "$(pidof bash)"

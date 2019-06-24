@@ -1,1 +1,8 @@
 #!/usr/bin/env bash
+#This script prints a phrase indefinitely and it doesn't close with kill
+while :
+do
+ echo "To infinity and beyond"
+ sleep 2
+ trap 'echo "I am invincible!!!"' TERM
+done
