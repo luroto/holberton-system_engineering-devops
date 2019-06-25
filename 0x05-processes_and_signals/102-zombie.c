@@ -3,6 +3,19 @@
 #include <sys/types.h>
 #include <unistd.h>
 /**
+ *infinite_while - The name explains itself
+ *Return: 0 if sucessful
+ */
+int infinite_while(void)
+{
+	while (1)
+	{
+		sleep(1);
+	}
+	return (0);
+}
+
+/**
  *main - create zombie processes
  *Return: 0 if sucessful
  */
@@ -26,18 +39,5 @@ int main(void)
 		itera++;
 	}
 	infinite_while();
-	return (0);
-
-}
-/**
- *infinite_while - The name explains itself
- *Return: 0 if sucessful
- */
-int infinite_while(void)
-{
-	while (1)
-	{
-		sleep(1);
-	}
 	return (0);
 }
