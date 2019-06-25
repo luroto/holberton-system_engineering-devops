@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+if [ "$1" -eq "start" ]
+ then
+  manage_my_process start &
+  echo $$ >> /var/run/my_process.pid
+  echo "manage_my_process started"
+elif [ "$1" -eq "stops" ]
+  then
+    manage_my_process stop
+    rm -r /var/run/my_process.pid
+    echo "manage_my_process stopped"
+elif [ "$1" -eq "restart" ]
+  then
+   manage_my_process stop
+   rm -r /var/run/my_process.pid
+   manage_my_process start &
+   echo $$ >> /var/run/my_process.pid
+   echo "manage_my_process restarted"
+else
+   echo "Usage: manage_my_ process {start|stop|restart}"
+fi
