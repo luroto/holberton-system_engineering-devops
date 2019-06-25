@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This script sets an infinite loop which only closes at certain signals
 echo "$$" > "/var/run/holbertonscript.pid"
 while :
 do
