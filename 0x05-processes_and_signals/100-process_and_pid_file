@@ -1,1 +1,10 @@
 #!/usr/bin/env bash
+echo "$$" > "/var/run/holbertonscript.pid"
+while :
+do
+ echo "To infinity and beyond"
+ sleep 2
+ trap 'echo "I hate the kill command"; rm /var/run/holbertonscript.pid; exit' TERM
+ trap  'echo "Y U no love me?!"' INT
+ trap 'rm /var/run/holbertonscript.pid; exit' QUIT
+done
