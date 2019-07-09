@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script prints a list of listening ports and the processes that are
+# making use of them.
+netstat -l
