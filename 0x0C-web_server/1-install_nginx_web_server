@@ -2,5 +2,6 @@
 # This script installs and configure nginx
 sudo apt-get -y update
 sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
 echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
-sudo systemctl restart nginx
+sudo systemctl start nginx
