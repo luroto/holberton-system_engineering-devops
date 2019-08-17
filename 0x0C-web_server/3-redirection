@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 # Install nginx and insert a redirection
-sudo apt-get -y update
-sudo apt-get -y install nginx
-echo "Holberton School" | sudo tee /var/www/html/index.html
 sudo sed -i "30i \\\trewrite ^/redirect_me https://www.youtube.com/watch?v=54SBHobALBQ permanent;" /etc/nginx/sites-available/default
 sudo service nginx start 
