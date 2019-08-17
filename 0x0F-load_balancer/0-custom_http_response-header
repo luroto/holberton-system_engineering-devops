@@ -1,11 +1,8 @@
 #! /usr/bin/env bash
 # This script configure everything
+# shellcheck disable=SC2154
 sudo apt-get -y update
 sudo apt-get -y install nginx
-echo "Holberton School" | sudo tee /var/www/html/index.html
-sudo sed -i "30i \\\trewrite ^/redirect_me https://www.youtube.com/watch?v=54SBHobALBQ permanent;" /etc/nginx/sites-available/default
-sudo touch /var/www/html/my_404.html
-echo -e "Ceci n'est pas une page\n" | sudo tee /var/www/html/my_404.html
-sudo sed -i "55i \\\terror_page 404 \/my_404.html;\n \tlocation \/my_404.html {\n \t \t root \/var\/www\/html;\n \t \t internal;\n \t}" /etc/nginx/sites-available/default
+sudo service nginx start
 sudo sed -i "48i \\\t \tadd_header \"X-Served-By\" \"$HOSTNAME\";" /etc/nginx/sites-available/default
 sudo service nginx restart
