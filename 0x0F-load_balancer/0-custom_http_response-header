@@ -1,1 +1,4 @@
 #!/usr/bin/env bash
+# Install nginx and insert a redirection
+sudo sed -i "48i \\\t \tadd_header X-Served-By \"$HOSTNAME\";" /etc/nginx/sites-available/default
+sudo service nginx restart
