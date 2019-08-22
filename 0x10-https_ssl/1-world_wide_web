@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+search="$1"
+occur="1"
+char="."
+count="$(awk -F "{char}" '{print -NF}' << "${search}")"
+if [ "$count" -ne "$occur" ]
+    then
+        for i in "web-01" "web-02" "lb-01" "www";
+        do
+            dig "$i".luroto-dev.tech A
+        done
+
+
