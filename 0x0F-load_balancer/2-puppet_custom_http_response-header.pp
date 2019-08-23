@@ -1,1 +1,2 @@
-#!/usr/bin/env bash
+# This script sets a custom http heaader with Puppet
+
