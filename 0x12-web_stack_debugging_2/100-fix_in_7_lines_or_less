@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-chown nginx:nginx /etc/nginx/nginx.conf
+chown nginx /etc/nginx/nginx.conf
 chmod 644 /etc/nginx/nginx.conf
 sudo -u nginx service nginx stop
 sed -i "1i user nginx;" /etc/nginx/nginx.conf
