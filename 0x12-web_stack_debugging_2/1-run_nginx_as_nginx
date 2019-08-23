@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script configures nginx to listening to port 80 and running only by nginx user
+chown nginx /etc/nginx/nginx.conf
+chmod 644 /etc/nginx/nginx.conf
+sudo -u nginx service nginx stop
+sed -i "1i /user nginx;" /etc/nginx/nginx.conf
+sed -i 's/80 /8080 /g' /etc/nginx/sites-available/default
+pkill apache2
+sudo -u nginx service nginx restart
