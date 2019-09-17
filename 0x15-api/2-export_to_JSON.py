@@ -13,15 +13,16 @@ if __name__ == "__main__":
     todo = requests.get(todourl, params=usertodo)
     usuario = user.json()
     remain = todo.json()
-    total = len(remain)
     subdict = {}
     subdict["username"] = usuario[0].get("username")
-    for counter in remain:
-        for key, value in counter.items():
-            if key == "title" or key == "completed":
-                subdict["key"] = value
     dicto = {}
     listando = []
+    for count in remain:
+        for key, value in count.items():
+            if key == "title" or key == "completed":
+                subdict[key] = value
+                listando.append(subdict)
+    print(len(subdict.keys()))
     dicto[usuario[0].get("id")] = listando
     listando.append(subdict)
     with open('{}.json'.format(int(argv[1])), 'w') as writingfile:
