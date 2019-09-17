@@ -22,7 +22,7 @@ if __name__ == "__main__":
         appending = [usuario[0].get("id"), usuario[0].get("username"),
                      itera.get("completed"), itera.get("title")]
         lista.append(appending)
-    with open('USER_ID.csv', 'w', newline='') as writingfile:
+    with open('{}.csv'.format(int(argv[1])), 'w', newline='') as writingfile:
         writing = csv.writer(writingfile, delimiter=',', quotechar='"',
                              quoting=csv.QUOTE_ALL)
         for iteran in lista:
