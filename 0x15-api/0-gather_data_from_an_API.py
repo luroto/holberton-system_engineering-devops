@@ -21,4 +21,4 @@ if __name__ == "__main__":
                                                           counter, total))
     for counter in remain:
         if counter.get("completed") is True:
-            print("\t{}".format(counter["title"]))
+            print("\t {}".format(counter["title"]))
