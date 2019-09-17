@@ -13,15 +13,15 @@ if __name__ == "__main__":
     todo = requests.get(todourl, params=usertodo)
     usuario = user.json()
     remain = todo.json()
-    subdict = {}
-    subdict["username"] = usuario[0].get("username")
     dicto = {}
     listando = []
+    print(remain)
     for count in remain:
-        for key, value in count.items():
-            if key == "title" or key == "completed":
-                subdict[key] = value
-                listando.append(subdict)
+        subdict = {}
+        subdict["title"] = count.get("title")
+        subdict["completed"] = count.get("completed")
+        subdict["username"] = usuario[0].get("username")
+        listando.append(subdict)
     print(len(subdict.keys()))
     dicto[usuario[0].get("id")] = listando
     listando.append(subdict)
