@@ -12,7 +12,6 @@ if __name__ == "__main__":
     user = requests.get(userurl, params=userdata)
     todo = requests.get(todourl, params=usertodo)
     usuario = user.json()
-    len(usuario)
     remain = todo.json()
     dicto = {}
     listando = []
@@ -24,4 +23,4 @@ if __name__ == "__main__":
         listando.append(subdict)
     dicto[usuario[0].get("id")] = listando
     with open('{}.json'.format(int(argv[1])), 'w') as writingfile:
-        json.dump(dicto, writingfile)
+        writingfile.write(json.dumps(dicto, writingfile))
