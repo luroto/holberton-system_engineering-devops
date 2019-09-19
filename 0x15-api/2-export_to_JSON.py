@@ -23,4 +23,4 @@ if __name__ == "__main__":
         listando.append(subdict)
     dicto[usuario[0].get("id")] = listando
     with open('{}.json'.format(int(argv[1])), 'w') as writingfile:
-        writingfile.write(json.dumps(dicto, writingfile))
+        writingfile.write(json.dumps(dicto))
