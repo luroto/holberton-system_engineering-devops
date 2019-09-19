@@ -17,10 +17,10 @@ if __name__ == "__main__":
     listando = []
     for count in remain:
         subdict = {}
-        subdict["title"] = count.get("title")
+        subdict["task"] = count.get("title")
         subdict["completed"] = count.get("completed")
         subdict["username"] = usuario[0].get("username")
         listando.append(subdict)
     dicto[usuario[0].get("id")] = listando
     with open('{}.json'.format(int(argv[1])), 'w') as writingfile:
-        writingfile.write(json.dumps(dicto))
+        json.dump(dicto, writingfile)
