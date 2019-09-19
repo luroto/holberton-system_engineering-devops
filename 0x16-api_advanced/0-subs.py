@@ -10,6 +10,10 @@ def number_of_subscribers(subreddit):
     headers = {"User-Agent": "Requests python library",
                "From": "774@holbertonschool.com"}
     about = requests.get(url, headers=headers)
+    print(type(about.status_code))
+    print(about.status_code)
+    if about.status_code == 404:
+        return(0)
     about = about.json()
     content = about["data"]
     return (content["subscribers"])
