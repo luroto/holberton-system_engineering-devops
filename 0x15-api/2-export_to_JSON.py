@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This script gets info from an API and exports to a JSON file"""
+""" This script gets info from an API and exports it to a JSON file"""
 import json
 import requests
 from sys import argv
@@ -15,14 +15,12 @@ if __name__ == "__main__":
     remain = todo.json()
     dicto = {}
     listando = []
-    print(remain)
     for count in remain:
         subdict = {}
         subdict["title"] = count.get("title")
         subdict["completed"] = count.get("completed")
         subdict["username"] = usuario[0].get("username")
         listando.append(subdict)
-    print(len(subdict.keys()))
     dicto[usuario[0].get("id")] = listando
     listando.append(subdict)
     with open('{}.json'.format(int(argv[1])), 'w') as writingfile:
