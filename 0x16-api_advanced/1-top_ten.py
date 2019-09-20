@@ -12,6 +12,7 @@ def top_ten(subreddit):
     hot = requests.get(url, headers=identify)
     if hot.status_code == 404:
         print("None")
+        return 0
     if hot.status_code == 200:
         hot = hot.json()
         hot = hot["data"]
@@ -31,3 +32,4 @@ def top_ten(subreddit):
             itera += 1
     else:
         print("None")
+        return 0
