@@ -9,7 +9,7 @@ def top_ten(subreddit):
     identify = {"User-Agent": "Requests library from Python",
                 "From": "774@holbertonschool.com"}
     to_print = []
-    hot = requests.get(url, headers=identify)
+    hot = requests.get(url, headers=identify, allow_redirects=False)
     if hot.status_code == 404:
         print("None")
         return 0
