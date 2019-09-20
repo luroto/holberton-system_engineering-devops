@@ -11,20 +11,21 @@ def top_ten(subreddit):
     to_print = []
     hot = requests.get(url, headers=identify)
     if hot.status_code == 404:
-        return 0
-    hot = hot.json()
-    hot = hot["data"]
-    hot = hot["children"]
-    for items in hot:
-        del items["kind"]
-    for data in hot:
-        to_print.append(data["data"])
-    hot = to_print
-    to_print = []
-    for dictio in hot:
-        to_print.append(dictio["title"])
-    itera = 0
-    for itera in range(len(to_print)):
-        if itera < 9:
-            print(to_print[itera])
-        itera += 1
+        print("None")
+    if hot.status_code == 200:
+        hot = hot.json()
+        hot = hot["data"]
+        hot = hot["children"]
+        for items in hot:
+            del items["kind"]
+        for data in hot:
+            to_print.append(data["data"])
+        hot = to_print
+        to_print = []
+        for dictio in hot:
+            to_print.append(dictio["title"])
+        itera = 0
+        for itera in range(len(to_print)):
+            if itera < 9:
+                print(to_print[itera])
+            itera += 1
