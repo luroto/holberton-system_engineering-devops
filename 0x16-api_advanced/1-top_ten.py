@@ -29,3 +29,5 @@ def top_ten(subreddit):
             if itera < 9:
                 print(to_print[itera])
             itera += 1
+    else:
+        print("None")
