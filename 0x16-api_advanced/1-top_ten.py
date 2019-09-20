@@ -5,7 +5,7 @@ import requests
 
 def top_ten(subreddit):
     """ This script gets and processes the http response"""
-    url = "https://www.reddit.com/r/" + subreddit + "/hot.json"
+    url = "https://www.reddit.com/r/" + subreddit + "/hot.json?limit=10"
     identify = {"User-Agent": "Requests library from Python",
                 "From": "774@holbertonschool.com"}
     to_print = []
@@ -25,11 +25,5 @@ def top_ten(subreddit):
         to_print = []
         for dictio in hot:
             to_print.append(dictio["title"])
-        itera = 0
-        for itera in range(len(to_print)):
-            if itera < 9:
-                print(to_print[itera])
-            itera += 1
-    else:
-        print("None")
-        return 0
+        for itera in to_print:
+            print(itera)
