@@ -2,7 +2,7 @@
 
 This text documents an outage migrating a website to Wordpress.
 
-[!(https://qph.fs.quoracdn.net/main-qimg-346aef273af21139ac0ac938662b2035-c)]
+[![Random](https://qph.fs.quoracdn.net/main-qimg-346aef273af21139ac0ac938662b2035-c)]
 
 ## Issue summary
 
